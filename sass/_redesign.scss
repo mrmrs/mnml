@@ -1,0 +1,52 @@
+/* ==========================================================================
+   SKINS
+   ========================================================================== */
+$green:#46D697;
+.bg-dark {background:#222;color:#fff;}
+.no-margin {margin:0;}
+
+.section-padding {padding:40px 0;}
+
+$value:128px;
+.site-logo { font-family:"corner-store";}
+.circle { border-radius: 9999px; }
+.bg-white {background:#fff;color:#111;}
+
+.mega {font-size:192px;}
+.center {text-align:center;}
+.serif {font-family:"ff-meta-serif-web-pro";}
+html,body {height:100%;}
+body {font-family: "ff-meta-serif-web-pro";font-weight:100;background:lighten(#46D697,1%);position:relative;}
+h1,h2,h3,h4,h5,h6 {font-weight:100;}
+
+.link-download {
+  text-decoration:none;
+  font-size:20px;
+  color:#111;
+  display:inline-block;
+  text-transform: uppercase;
+  -webkit-transition:padding, .2s;
+  padding:14px;
+  border-radius:4px;
+  background:#54D0E2;
+  border:1px solid rgba(255,255,255,.2);
+  width:auto;
+  color:darken($green,40%);
+  font-family:"proxima-nova";
+  margin-right:20px;
+  margin-bottom:20px;
+  &:hover {
+    padding:40px; 
+    -webkit-transition:padding, .2s;
+  }
+}
+
+.site-footer {
+  background:#eee;
+  color:#999;
+}
+
+.content {max-width:720px;margin:0 auto;}
+p {font-size:26px;}
+
+

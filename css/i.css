@@ -191,7 +191,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -322,23 +322,77 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-body {
-  max-width: 768px;
-  padding: 0 1.5em;
-  margin: 0 auto; }
+/* ==========================================================================
+   SKINS
+   ========================================================================== */
+.bg-dark {
+  background: #222;
+  color: #fff; }
 
-html {
-  font-family: Georgia;
-  font-weight: 100; }
+.no-margin {
+  margin: 0; }
+
+.section-padding {
+  padding: 40px 0; }
+
+.site-logo {
+  font-family: "corner-store"; }
+
+.circle {
+  border-radius: 9999px; }
+
+.bg-white {
+  background: #fff;
+  color: #111; }
+
+.mega {
+  font-size: 192px; }
+
+.center {
+  text-align: center; }
+
+.serif {
+  font-family: "ff-meta-serif-web-pro"; }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: "ff-meta-serif-web-pro";
+  font-weight: 100;
+  background: #4ad799;
+  position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 1px; }
-
-.lighten-up {
   font-weight: 100; }
 
-p {
-  font-size: 20px; }
+.link-download {
+  text-decoration: none;
+  font-size: 20px;
+  color: #111;
+  display: inline-block;
+  text-transform: uppercase;
+  -webkit-transition: padding, .2s;
+  padding: 14px;
+  border-radius: 4px;
+  background: #54D0E2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: auto;
+  color: #0f412b;
+  font-family: "proxima-nova";
+  margin-right: 20px;
+  margin-bottom: 20px; }
+  .link-download:hover {
+    padding: 40px;
+    -webkit-transition: padding, .2s; }
 
-h1 {
-  font-size: 80px; }
+.site-footer {
+  background: #eee;
+  color: #999; }
+
+.content {
+  max-width: 720px;
+  margin: 0 auto; }
+
+p {
+  font-size: 26px; }
