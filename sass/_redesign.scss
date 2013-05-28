@@ -1,25 +1,145 @@
 /* ==========================================================================
-   SKINS
+   CASCADE THESE THINGS
    ========================================================================== */
-* {box-sizing:border-box;}
-$green:#46D697;
-.bg-dark {background:#222;color:#fff;}
-.no-margin {margin:0;}
 
-.section-padding {padding:40px 0;}
-.half-padding {padding:20px 0;}
-.header-padding {padding:0 0 20px 0;}
+
+
+html { 
+  height: 100%;
+}
+
+body {
+  font-family: "ff-meta-serif-web-pro";
+  font-weight:100;
+  position:relative;
+  height: 100%;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+/* ==========================================================================
+   CONTENT WRAPPERS
+   ========================================================================== */
+
+.content {
+  max-width:720px; 
+  margin:0 auto; 
+  width:100%; 
+  padding:0 20px 0px 20px;
+}
+
+.content-wrapper {
+  margin-top:0px;
+  border-top:1px solid #ddd;
+}
+
+
+
+/* ==========================================================================
+   SKINS
+
+   - Colors
+   - Geometry
+   ========================================================================== */
+
+/* Colors
+   ========================================================================== */
+
+$first: #283236;
+$second: #B6CED9;
+$third: #23C5FF;
+$fourth: #0685B2;
+$fifth: #FF3C69;
+$green:#46D697;
 
 $value:128px;
-.site-logo { font-family:"corner-store";}
-.circle { border-radius: 9999px; }
-.bg-white {background:#fff;color:#111;}
 
+.bg-dark {  background:#222; color:#fff; }
+.bg-white { background:#fff; color:#222; }
+
+.dl-link { background:#eee url(/svg/download.svg) no-repeat -100px center; }
+.fork-me { background:#eee url(/svg/fork.svg)     no-repeat -100px center; }
+
+.maker {color:#999!important;}
+
+.hover:hover {
+  -webkit-transition: background-position, .4s;
+  background-position:10px center;
+  padding-left:45px;
+}
+
+.issue-hover:hover {
+  -webkit-transition: background-color .5s;
+  background-color:cyan;
+}
+
+/* Geometry
+   ========================================================================== */
+
+.circle { border-radius: 9999px; }
+
+
+
+/* ==========================================================================
+   SPACING
+
+   - Padding
+   - Margin
+   ========================================================================== */
+
+.section-padding {  padding:40px 0;}
+.half-padding {     padding:20px 0;}
+.header-padding {   padding:0 0 40px 0;}
+.padding-top {      padding-top:40px;}
+.padding-top-half { padding-top:20px;}
+.padding-bottom {   padding-bottom: 40px;}
+
+.no-margin {        margin:0;}
+.margin-top-20 {    margin-top:60px;}
+.bottom-clear {     margin-bottom:40px;}
+.centered {         margin:0 auto;}
+.section-margin {
+  margin-top:20px;
+  margin-bottom:60px;
+}
+
+/* ==========================================================================
+   TYPE
+   ========================================================================== */
+
+.site-logo { font-family:"corner-store";}
 .mega {font-size:192px;}
 .center {text-align:center;}
 .serif {font-family:"ff-meta-serif-web-pro";}
-html,body {height:100%;}
-body {font-family: "ff-meta-serif-web-pro";font-weight:100;position:relative;}
+.tagline {font-size:16px!important;color:#777;}
+.sans-serif {font-family:"proxima-nova";}
+.caps {text-transform:uppercase;}
+.title-spacing {letter-spacing:.1em;}
+.small-title {font-size:16px;}
+.lh-1 {line-height:1;}
+.h2 {font-size:32px;}
+
+.section-title {
+  font-size:48px;
+}
+
+.text-link { 
+  text-decoration:none;
+  color:#333;
+}
+
+p { 
+  font-size:20px;
+  line-height:1.5; 
+}
+
+.meta { 
+  font-size:12px;
+  color:#999;
+}
+
 h1,h2,h3,h4,h5,h6 {font-weight:100;}
 
 .link-highlight {
@@ -39,26 +159,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   font-family:"proxima-nova";
   background-size:24px 24px;
 }
-.sans-serif {font-family:"proxima-nova";}
-.hover:hover {
-  -webkit-transition: background-position, .4s;
-  background-position:10px center;
-  padding-left:45px;
-}
 
-.issue-hover:hover {
-  -webkit-transition: background-color .5s;
-  background-color:cyan;
-}
-
-.dl-link {
-  background:#eee url(/svg/download.svg) no-repeat -100px center;
-}
-
-.fork-me {
-  background:#eee url(/svg/fork.svg) no-repeat -100px center;
-}
-.maker {color:#999!important;}
 
 .site-footer {
   background:#eee;
@@ -70,26 +171,23 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   .text-link {padding-right:20px;}
 }
 
-.content {max-width:720px; margin:0 auto; width:100%; padding:0 20px 20px 20px;}
-.content-wrapper {margin-top:0px;border-top:1px solid #ddd;}
-p {font-size:20px;line-height:1.5;}
+/* ==========================================================================
+   DISPLAY
+   ========================================================================== */
 
-.h2 {font-size:32px;}
-.text-link {text-decoration:none;color:#333;}
-.centered {margin:0 auto;}
-.meta {padding-top:20px;font-size:12px;color:#999;}
+
+   
 .db {display:block;}
-.caps {text-transform:uppercase;}
-.title-spacing {letter-spacing:.1em;}
-.small-title {font-size:16px;}
-.margin-top-20 {margin-top:60px;}
-.lh-1 {line-height:1;}
-.bottom-clear {margin-bottom:40px;}
-.section-title {font-size:48px;margin-top:20px;margin-bottom:60px;}
-.outro {font-size:32px;padding-top:20px;}
+
+/* ==========================================================================
+   QUERIES
+   ========================================================================== */
+
+
 
 @media screen and (max-width:480px) {
-   .mega {font-size:96px;} 
-   .mobile-small {font-size:16px!important;}
-   .h2 {font-size:26px;}
+ .h2 {font-size:24px;}
+ .mega {font-size:96px;} 
+ .mobile-small {font-size:16px!important;}
+ .mobile-hide {display:none;}
 }
