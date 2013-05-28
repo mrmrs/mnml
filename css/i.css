@@ -375,7 +375,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: .1em;
   padding: 14px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid #ccc;
   width: auto;
   color: #0f412b;
   font-family: "proxima-nova";
@@ -399,7 +399,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .content {
   max-width: 720px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px; }
+
+.content-wrapper {
+  margin-top: 20px;
+  border-top: 1px solid #ddd; }
 
 p {
   font-size: 26px; }
+
+@media screen and (max-width: 480px) {
+  .mega {
+    font-size: 96px; } }
