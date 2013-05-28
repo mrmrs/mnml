@@ -335,6 +335,12 @@ table {
 .section-padding {
   padding: 40px 0; }
 
+.half-padding {
+  padding: 20px 0; }
+
+.header-padding {
+  padding: 0 0 20px 0; }
+
 .site-logo {
   font-family: "corner-store"; }
 
@@ -365,7 +371,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 100; }
 
-.link-download {
+.link-highlight {
   text-decoration: none;
   font-size: 20px;
   color: #111;
@@ -375,17 +381,21 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: .1em;
   padding: 14px;
   border-radius: 4px;
+  margin-bottom: 20px;
   border: 1px solid #ccc;
   width: auto;
   color: #0f412b;
   font-family: "proxima-nova";
-  margin-right: 20px;
-  margin-bottom: 20px;
   background-size: 24px 24px; }
-  .link-download:hover {
-    -webkit-transition: background-position, .4s;
-    background-position: 10px center;
-    padding-left: 45px; }
+
+.hover:hover {
+  -webkit-transition: background-position, .4s;
+  background-position: 10px center;
+  padding-left: 45px; }
+
+.issue-hover:hover {
+  -webkit-transition: background-color .5s;
+  background-color: cyan; }
 
 .dl-link {
   background: #eeeeee url(/svg/download.svg) no-repeat -100px center; }
@@ -393,9 +403,19 @@ h1, h2, h3, h4, h5, h6 {
 .fork-me {
   background: #eeeeee url(/svg/fork.svg) no-repeat -100px center; }
 
+.maker {
+  color: #999999 !important; }
+
 .site-footer {
   background: #eee;
-  color: #999; }
+  color: #999;
+  font-family: "proxima-nova";
+  padding: 20px 0;
+  line-height: 2; }
+  .site-footer a:hover {
+    color: cyan; }
+  .site-footer .text-link {
+    padding-right: 20px; }
 
 .content {
   max-width: 720px;
@@ -404,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px; }
 
 .content-wrapper {
-  margin-top: 20px;
+  margin-top: 0px;
   border-top: 1px solid #ddd; }
 
 p {
@@ -413,3 +433,22 @@ p {
 @media screen and (max-width: 480px) {
   .mega {
     font-size: 96px; } }
+.text-link {
+  text-decoration: none;
+  color: #333; }
+
+.centered {
+  margin: 0 auto; }
+
+.meta {
+  font-size: 12px;
+  color: #999; }
+
+.db {
+  display: block; }
+
+.caps {
+  text-transform: uppercase; }
+
+.title-spacing {
+  letter-spacing: .1em; }

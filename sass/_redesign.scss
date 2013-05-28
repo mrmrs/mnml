@@ -6,6 +6,8 @@ $green:#46D697;
 .no-margin {margin:0;}
 
 .section-padding {padding:40px 0;}
+.half-padding {padding:20px 0;}
+.header-padding {padding:0 0 20px 0;}
 
 $value:128px;
 .site-logo { font-family:"corner-store";}
@@ -19,7 +21,7 @@ html,body {height:100%;}
 body {font-family: "ff-meta-serif-web-pro";font-weight:100;position:relative;}
 h1,h2,h3,h4,h5,h6 {font-weight:100;}
 
-.link-download {
+.link-highlight {
   text-decoration:none;
   font-size:20px;
   color:#111;
@@ -29,18 +31,23 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   letter-spacing:.1em;
   padding:14px;
   border-radius:4px;
+  margin-bottom:20px;
   border:1px solid #ccc;
   width:auto;
   color:darken($green,40%);
   font-family:"proxima-nova";
-  margin-right:20px;
-  margin-bottom:20px;
   background-size:24px 24px;
-  &:hover {
-    -webkit-transition: background-position, .4s;
-    background-position:10px center;
-    padding-left:45px;
-  }
+}
+
+.hover:hover {
+  -webkit-transition: background-position, .4s;
+  background-position:10px center;
+  padding-left:45px;
+}
+
+.issue-hover:hover {
+  -webkit-transition: background-color .5s;
+  background-color:cyan;
 }
 
 .dl-link {
@@ -50,18 +57,29 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
 .fork-me {
   background:#eee url(/svg/fork.svg) no-repeat -100px center;
 }
+.maker {color:#999!important;}
 
 .site-footer {
   background:#eee;
   color:#999;
+  font-family:"proxima-nova";
+  padding:20px 0;
+  line-height:2;
+  a:hover {color:cyan;}
+  .text-link {padding-right:20px;}
 }
 
 .content {max-width:720px;margin:0 auto;width:100%;padding:20px;}
-.content-wrapper {margin-top:20px;border-top:1px solid #ddd;}
+.content-wrapper {margin-top:0px;border-top:1px solid #ddd;}
 p {font-size:26px;}
 
 @media screen and (max-width:480px) {
    .mega {font-size:96px;} 
 }
 
-
+.text-link {text-decoration:none;color:#333;}
+.centered {margin:0 auto;}
+.meta {font-size:12px;color:#999;}
+.db {display:block;}
+.caps {text-transform:uppercase;}
+.title-spacing {letter-spacing:.1em;}
