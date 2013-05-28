@@ -34,13 +34,23 @@
       <div class="section-padding content-wrapper">
     <div class="content">
       <h1 class="center caps lh-1 section-title">What is it?</h1>
-      <h1 class="small-title sans-serif caps">Features</h1>
+      <h2 class="small-title sans-serif caps">Features</h2>
       <h2 class="h2">HTML5 template</h2>
       <p>
         Just the basics. An HTML5 doctype. A single css file include. A title tag and some meta tags. It's waiting for your content.
       </p>
       <h2 class="h2  margin-top-20">Basic scss setup</h2>
-      <h2 class="h2  margin-top-20">Normalize.css</h2>
+      <p>Some basic partial organization that is easy to configure / extend to your needs as your site styles grow.</p>
+<pre>
+└── sass
+    ├── _variables.scss
+    ├── _normalize.scss
+    ├── _type.scss
+    ├── _grid.scss
+    ├── _styles.scss
+    └── i.scss            
+</pre>
+      <h2 class="h2  margin-top-20">Uses normalize.css</h2>
       <p>
         Normalize.css is an alternative to reset.css. It preserves useful browser defaults - and only "targets the styles that need normalizing."
         <a href="http://necolas.github.io/normalize.css/" title="normalize.css github repo">See the project website for more info.</a>
@@ -51,9 +61,6 @@
       </p>
       <h2 class="h2  margin-top-20">Rake tasks</h2>
       <p>Simple rake tasks for starting sass for development as well as a css minification task to use before deployment to production.</p>
-      <p>
-        Start prototyping faster. Don't spend time getting up and running. Use MNML.
-      </p>
     </div>
   </div>
   </main>
