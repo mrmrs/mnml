@@ -16,7 +16,7 @@ $value:128px;
 .center {text-align:center;}
 .serif {font-family:"ff-meta-serif-web-pro";}
 html,body {height:100%;}
-body {font-family: "ff-meta-serif-web-pro";font-weight:100;background:lighten(#46D697,1%);position:relative;}
+body {font-family: "ff-meta-serif-web-pro";font-weight:100;position:relative;}
 h1,h2,h3,h4,h5,h6 {font-weight:100;}
 
 .link-download {
@@ -25,20 +25,30 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   color:#111;
   display:inline-block;
   text-transform: uppercase;
-  -webkit-transition:padding, .2s;
+  -webkit-transition: padding, .4s;
+  letter-spacing:.1em;
   padding:14px;
   border-radius:4px;
-  background:#54D0E2;
   border:1px solid rgba(255,255,255,.2);
   width:auto;
   color:darken($green,40%);
   font-family:"proxima-nova";
   margin-right:20px;
   margin-bottom:20px;
+  background-size:24px 24px;
   &:hover {
-    padding:40px; 
-    -webkit-transition:padding, .2s;
+    -webkit-transition: background-position, .4s;
+    background-position:10px center;
+    padding-left:45px;
   }
+}
+
+.dl-link {
+  background:#eee url(/svg/download.svg) no-repeat -100px center;
+}
+
+.fork-me {
+  background:#eee url(/svg/fork.svg) no-repeat -100px center;
 }
 
 .site-footer {

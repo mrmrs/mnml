@@ -360,7 +360,6 @@ html, body {
 body {
   font-family: "ff-meta-serif-web-pro";
   font-weight: 100;
-  background: #4ad799;
   position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -372,19 +371,27 @@ h1, h2, h3, h4, h5, h6 {
   color: #111;
   display: inline-block;
   text-transform: uppercase;
-  -webkit-transition: padding, .2s;
+  -webkit-transition: padding, .4s;
+  letter-spacing: .1em;
   padding: 14px;
   border-radius: 4px;
-  background: #54D0E2;
   border: 1px solid rgba(255, 255, 255, 0.2);
   width: auto;
   color: #0f412b;
   font-family: "proxima-nova";
   margin-right: 20px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  background-size: 24px 24px; }
   .link-download:hover {
-    padding: 40px;
-    -webkit-transition: padding, .2s; }
+    -webkit-transition: background-position, .4s;
+    background-position: 10px center;
+    padding-left: 45px; }
+
+.dl-link {
+  background: #eeeeee url(/svg/download.svg) no-repeat -100px center; }
+
+.fork-me {
+  background: #eeeeee url(/svg/fork.svg) no-repeat -100px center; }
 
 .site-footer {
   background: #eee;
