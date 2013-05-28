@@ -1,6 +1,7 @@
 /* ==========================================================================
    SKINS
    ========================================================================== */
+* {box-sizing:border-box;}
 $green:#46D697;
 .bg-dark {background:#222;color:#fff;}
 .no-margin {margin:0;}
@@ -38,7 +39,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   font-family:"proxima-nova";
   background-size:24px 24px;
 }
-
+.sans-serif {font-family:"proxima-nova";}
 .hover:hover {
   -webkit-transition: background-position, .4s;
   background-position:10px center;
@@ -69,17 +70,24 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   .text-link {padding-right:20px;}
 }
 
-.content {max-width:720px;margin:0 auto;width:100%;padding:20px;}
+.content {max-width:720px; margin:0 auto; width:100%; padding:0 20px 20px 20px;}
 .content-wrapper {margin-top:0px;border-top:1px solid #ddd;}
-p {font-size:26px;}
+p {font-size:20px;}
+
 
 @media screen and (max-width:480px) {
    .mega {font-size:96px;} 
+   .mobile-small {font-size:16px!important;}
 }
-
+.h2 {font-size:32px;}
 .text-link {text-decoration:none;color:#333;}
 .centered {margin:0 auto;}
-.meta {font-size:12px;color:#999;}
+.meta {padding-top:20px;font-size:12px;color:#999;}
 .db {display:block;}
 .caps {text-transform:uppercase;}
 .title-spacing {letter-spacing:.1em;}
+.small-title {font-size:16px;}
+.margin-top-20 {margin-top:60px;}
+.lh-1 {line-height:1;}
+.bottom-clear {margin-bottom:40px;}
+.section-title {font-size:64px;margin-top:20px;margin-bottom:60px;}
