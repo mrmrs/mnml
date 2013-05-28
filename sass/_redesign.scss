@@ -67,7 +67,7 @@ $value:128px;
 .hover:hover {
   -webkit-transition: background-position, .4s;
   background-position:10px center;
-  padding-left:45px;
+  padding-left:40px;
 }
 
 .issue-hover:hover {
@@ -90,6 +90,7 @@ $value:128px;
    ========================================================================== */
 
 .section-padding {  padding:40px 0;}
+.polaroid-padding {padding-top:40px;padding-bottom:20px;}
 .half-padding {     padding:20px 0;}
 .header-padding {   padding:0 0 40px 0;}
 .padding-top {      padding-top:40px;}
@@ -144,20 +145,20 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
 
 .link-highlight {
   text-decoration:none;
-  font-size:20px;
+  font-size:16px;
   color:#111;
   display:inline-block;
   text-transform: uppercase;
   -webkit-transition: padding, .4s;
   letter-spacing:.1em;
-  padding:14px;
+  padding:20px;
   border-radius:4px;
   margin-bottom:20px;
   border:1px solid #ccc;
   width:auto;
   color:darken($green,40%);
   font-family:"proxima-nova";
-  background-size:24px 24px;
+  background-size:20px 20px;
 }
 
 
