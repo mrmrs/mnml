@@ -65,7 +65,7 @@ $orange: #FF6526;
 .dl-link { background:#eee url(/svg/download.svg) no-repeat -100px center; }
 .fork-me { background:#eee url(/svg/fork.svg)     no-repeat -100px center; }
 
-.maker {color:#999!important;}
+.site-footer .maker {color:#999;}
 
 .hover:hover {
   -webkit-transition: background-position, .4s;
@@ -74,10 +74,10 @@ $orange: #FF6526;
   padding-left:40px;
 }
 
-.issue-hover {background-color:cyan;}
+.issue-hover {background-color:$cyan;}
 .issue-hover:hover {
-  -webkit-transition: background-color .5s;
-  background-color:$cyan;
+  -webkit-transition: background-color .3s;
+  background-color:saturate($cyan,45%);
 }
 
 /* Geometry
@@ -166,15 +166,16 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   background-size:20px 20px;
 }
 
+.bug-report {border-top:1px solid #eee;}
 
 .site-footer {
-  background:#eee;
-  color:#999;
+  background:#f3f3f3;
+  color:#eee;
   font-family:"proxima-nova";
   padding:20px 0;
   line-height:2;
-  a:hover {color:$cyan;}
-  .text-link {padding-right:20px;}
+  .text-link {color:darken($cyan, 40%);padding-right:20px; -webkit-transition:top .2s;top:0;position:relative;}
+  .text-link:hover {-webkit-transition: color ease-in .2s; color:#999;}
 }
 
 /* ==========================================================================
