@@ -27,7 +27,7 @@ body {
   max-width:720px; 
   margin:0 auto; 
   width:100%; 
-  padding:0 20px 0px 20px;
+  padding:0 20px 20px 20px;
 }
 
 .content-wrapper {
@@ -52,10 +52,13 @@ $second: #B6CED9;
 $third: #23C5FF;
 $fourth: #0685B2;
 $fifth: #FF3C69;
-$green:#46D697;
+$green: #46D697;
 
+$yellow: #FFBE00;
+$cyan: #0CE8C3;
 $value:128px;
-
+$red: #C62C2A;
+$orange: #FF6526;
 .bg-dark {  background:#222; color:#fff; }
 .bg-white { background:#fff; color:#222; }
 
@@ -67,12 +70,14 @@ $value:128px;
 .hover:hover {
   -webkit-transition: background-position, .4s;
   background-position:10px center;
+  background-color:$cyan;
   padding-left:40px;
 }
 
+.issue-hover {background-color:cyan;}
 .issue-hover:hover {
   -webkit-transition: background-color .5s;
-  background-color:cyan;
+  background-color:$cyan;
 }
 
 /* Geometry
@@ -89,7 +94,7 @@ $value:128px;
    - Margin
    ========================================================================== */
 
-.section-padding {  padding:40px 0;}
+.section-padding {  padding:60px 0 40px 0;}
 .polaroid-padding {padding-top:40px;padding-bottom:20px;}
 .half-padding {     padding:20px 0;}
 .header-padding {   padding:0 0 40px 0;}
@@ -156,7 +161,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   margin-bottom:20px;
   border:1px solid #ccc;
   width:auto;
-  color:darken($green,40%);
+  color:#222;
   font-family:"proxima-nova";
   background-size:20px 20px;
 }
@@ -168,7 +173,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   font-family:"proxima-nova";
   padding:20px 0;
   line-height:2;
-  a:hover {color:cyan;}
+  a:hover {color:$cyan;}
   .text-link {padding-right:20px;}
 }
 
