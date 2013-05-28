@@ -55,7 +55,6 @@ $fifth: #FF3C69;
 $green: #46D697;
 
 $yellow: #FFBE00;
-$cyan: #0CE8C3;
 $value:128px;
 $red: #C62C2A;
 $orange: #FF6526;
@@ -70,14 +69,15 @@ $orange: #FF6526;
 .hover:hover {
   -webkit-transition: background-position, .4s;
   background-position:10px center;
-  background-color:$cyan;
+  background-color:lighten(cyan,35%);
+  border:1px solid darken(cyan,10%);
   padding-left:40px;
 }
 
-.issue-hover {background-color:$cyan;}
+.issue-hover {background-color:cyan;border:1px solid darken(cyan,10%);background-color:lighten(cyan,35%);}
 .issue-hover:hover {
   -webkit-transition: background-color .3s;
-  background-color:saturate($cyan,45%);
+  background-color:lighten(cyan,10%);
 }
 
 /* Geometry
@@ -148,6 +148,8 @@ p {
 
 h1,h2,h3,h4,h5,h6 {font-weight:100;}
 
+.gray-border { border:1px solid #ccc; }
+
 .link-highlight {
   text-decoration:none;
   font-size:16px;
@@ -159,14 +161,15 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   padding:20px;
   border-radius:4px;
   margin-bottom:20px;
-  border:1px solid #ccc;
   width:auto;
   color:#222;
   font-family:"proxima-nova";
   background-size:20px 20px;
 }
 
-.bug-report {border-top:1px solid #eee;}
+.bug-report {
+  border-top:1px solid #eee;
+}
 
 .site-footer {
   background:#f3f3f3;
@@ -174,7 +177,7 @@ h1,h2,h3,h4,h5,h6 {font-weight:100;}
   font-family:"proxima-nova";
   padding:20px 0;
   line-height:2;
-  .text-link {color:darken($cyan, 40%);padding-right:20px; -webkit-transition:top .2s;top:0;position:relative;}
+  .text-link {color:darken(cyan, 40%);padding-right:20px; -webkit-transition:top .2s;top:0;position:relative;}
   .text-link:hover {-webkit-transition: color ease-in .2s; color:#999;}
 }
 

@@ -29,8 +29,8 @@
     </header>
     <div class="polaroid-padding  bg-second">
       <div class=" downloads center">
-        <a href="https://github.com/mrmrs/mnml" class="link-highlight hover fork-me" title="MNML - A light-weight boilerplate for responsive html5/sass projects.">Fork on github</a><br>
-        <a href="https://github.com/mrmrs/mnml/zipball/master" class="link-highlight hover dl-link">Download as <b>.zip</b></a>
+        <a href="https://github.com/mrmrs/mnml" class="link-highlight hover fork-me gray-border" title="MNML - A light-weight boilerplate for responsive html5/sass projects.">Fork on github</a><br>
+        <a href="https://github.com/mrmrs/mnml/zipball/master" class="link-highlight hover dl-link gray-border">Download as <b>.zip</b></a>
       </div>
     </div>
       <div class="content-wrapper bg-third padding-top">
@@ -41,8 +41,15 @@
       <p>
         Just the basics. An HTML5 doctype. A single css file include. A title tag and some meta tags. It's waiting for your content.
       </p>
-      <h2 class="h2  margin-top-20">Basic scss setup</h2>
-      <p>Some basic partial organization that is easy to configure / extend to your needs as your site styles grow.</p>
+      <h2 class="h2 margin-top-20">Readable type. On any device.</h2>
+      <p>
+        Not all screens are the same. Make sure your type is readable no matter what device people are reading your content on. 
+        MNML provides a set of smarter type defaults for better responsive typography. The type scale is easily configurable. 
+      </p>
+      <h2 class="h2  margin-top-20">Basic SCSS organization</h2>
+      <p>
+        Start off with only what you need. Modularized to make it easy to add or subtract partials as you see fit.  
+      </p>
 <pre>
 └── sass
     ├── _variables.scss
@@ -52,11 +59,6 @@
     ├── _styles.scss
     └── i.scss            
 </pre>
-      <h2 class="h2  margin-top-20">Uses normalize.css</h2>
-      <p>
-        Normalize.css is an alternative to reset.css. It preserves useful browser defaults - and only "targets the styles that need normalizing."
-        <a href="http://necolas.github.io/normalize.css/" title="normalize.css github repo">See the project website for more info.</a>
-      </p>
 
       <h2 class="h2  margin-top-20">Light as a feather</h2>
       <p>
@@ -64,7 +66,7 @@
       </p>
       <h2 class="h2  margin-top-20">Media queries for mobile &amp; tablet devices</h2>
       <p>
-        Media queries for two breakpoints. Widths are easily configurable. Queries can be extended if needed.
+        Media queries for two breakpoints. Widths are configurable. Queries can be extended or removed as desired.
       </p>
       <h2 class="h2  margin-top-20">Rake tasks</h2>
       <p>Simple rake tasks for starting sass for development as well as a css minification task to use before deployment to production.</p>
