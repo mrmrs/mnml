@@ -1,23 +1,30 @@
 /* ==========================================================================
    Media Queries
 
-   - Mobile
-   - Tablets
+   - Not-small
+   - Medium
+   - Large
    ========================================================================== */
 
-   
-/* Mobile
+
+/* Not-small (anything bigger than your first breakpoint)
    ========================================================================== */
 
-@media screen and ($breakpoint-1-max-width) {
+@include break(not-small) {
 
 }
 
-
-
-/* Tablet
+/* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
    ========================================================================== */
 
-@media ($breakpoint-2-min-width) and ($breakpoint-2-max-width) {
+@include break(medium) {
 
 }
+
+/* Large - only targets 2nd breakpoint. Styles do not extend past 64em.
+   ========================================================================== */
+
+@include break(large) {
+
+}
+

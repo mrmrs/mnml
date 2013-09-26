@@ -16,7 +16,7 @@ $gray-dark:   #222;
 $gray-medium: #999;
 $gray-light:  #eee;
 
-   
+
 /* Type Scale
    ========================================================================== */
 
@@ -32,9 +32,10 @@ $font-size-5:16px;
 $font-size-6:12px;
 
 
-/* Mobile */
-$breakpoint-1-max-width:480px;
+/* Medium */
+$breakpoint-1-max-width:48em;
 
-/* Tablet */
-$breakpoint-2-min-width:480px;
-$breakpoint-2-max-width:1024px;
+/* Large */
+$breakpoint-2-min-width:48em;
+$breakpoint-2-max-width:64em;
+
