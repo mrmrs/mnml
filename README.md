@@ -12,9 +12,9 @@ Focused on mobile readability.
 ```bash
     git clone git@github.com:mrmrs/mnml.git [yourNewRepoName]
     cd [yourNewRepoName]
-    git remote rm origin
+    git rm -rf .git
+    git init
     git remote add origin git@github.com:[yourUserName]/[yourNewRepoName].git
-    git remote -v
 ```
 
 * git remote -v will allow you to check that you have changed the remote origin correctly. The output should look like:
@@ -23,6 +23,21 @@ Focused on mobile readability.
     origin  git@github.com:[yourUserName]/[yourNewRepoName].git (push)
 ```
 
+## Dev environment
+To set up a convenient dev environment run this at the root of mnml
+
+```bash
+    npm install
+```
+
+Then run
+
+```
+    gulp
+```
+
+Gulp is a javascript task runner. It compiles sass, lints the compiled css, and sets up a livereload server so you can save your fingers from pressing ⌘+r
+
 * Once you add & commit files you are ready to publish run:
 ```bash
 git push -u origin master
@@ -30,16 +45,19 @@ git push -u origin master
 
 # What is it?
 
-Mostly a bare-bones html5 template with some basic css I start most projects
-with.
+Mostly a bare-bones html5 template with some basic sass partials that
+I use to start prototypes with. Also includes automated tasks for
+sass compilation, css linting, css minification, and livereload integration.
 
 ## Directory structure
 ```
     mnml/
         ├── README.md
+        ├── gulpfile.js
+        ├── package.json
+        ├── index.html                (386 bytes)
         ├── css
         │   └── i.css                 (2 kb minified - 1.2kb gzipped)
-        ├── index.html                (386 bytes)
         └── sass                      CSS source
             ├── _normalize.scss
             ├── _grid.scss
