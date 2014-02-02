@@ -1,0 +1,35 @@
+{
+  "name": "mnml",
+  "version": "0.0.1",
+  "description": "Minimal template for building responsive prototypes with html5 and sass.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mrmrs/mnml.git"
+  },
+  "keywords": [
+    "html5",
+    "css",
+    "readability",
+    "sass"
+  ],
+  "author": "mrmrs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrmrs/mnml/issues"
+  },
+  "devDependencies": {
+    "gulp-livereload": "~0.3.1",
+    "gulp-minify-css": "~0.2.0",
+    "gulp-ruby-sass": "~0.2.0",
+    "gulp-autoprefixer": "0.0.6",
+    "tiny-lr": "0.0.5",
+    "gulp-watch": "~0.5.0",
+    "gulp-util": "~2.2.13",
+    "gulp": "~3.5.0",
+    "gulp-csslint": "~0.1.3"
+  }
+}
