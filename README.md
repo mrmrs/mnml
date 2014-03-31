@@ -10,24 +10,25 @@ Focused on mobile readability.
 * Create a new repo for your project on Github
 * In terminal run
 ```bash
-    git clone git@github.com:mrmrs/mnml.git [yourNewRepoName]
-    cd [yourNewRepoName]
-    git rm -rf .git
+    git clone git@github.com:mrmrs/mnml.git yourNewRepoName
+    cd yourNewRepoName
+    rm -rf .git
     git init
-    git remote add origin git@github.com:[yourUserName]/[yourNewRepoName].git
+    git remote add origin git@github.com:yourUserName/yourNewRepoName.git
 ```
 
 * git remote -v will allow you to check that you have changed the remote origin correctly. The output should look like:
 ```bash
-    origin git@github.com:[yourUserName]/[yourNewRepoName].git (fetch)
-    origin  git@github.com:[yourUserName]/[yourNewRepoName].git (push)
+    origin git@github.com:yourUserName/yourNewRepoName.git (fetch)
+    origin git@github.com:yourUserName/yourNewRepoName.git (push)
 ```
 
 ## Dev environment
 To set up a convenient dev environment run this at the root of mnml
 
 ```bash
-    npm install
+    npm install .
+    npm install -g gulp
 ```
 
 Then run
