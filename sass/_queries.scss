@@ -3,10 +3,16 @@
    ========================================================================== */
 
 /*
- * Mixing for mobile first queries.
- * Two breakpoints.
- * Use like @include break(medium) { ***Styles*** }
- *
+
+   Mixing for mobile first queries.
+   Two breakpoints.
+   Use like this:
+
+   @include break(medium) {
+     .class-name { color: red; }
+   }
+
+
  */
 
 @mixin break($point) {
