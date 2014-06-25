@@ -1,11 +1,22 @@
 # MNML
 
+## What is this?
+
 View the project page at [http://mn-ml.cc](http://mn-ml.cc "MNML - A light-weight responsive html5 boilerplate.")
 
-MNML is a starting point for responsive HTML5 SASS projects.
-Focused on mobile readability.
+MNML is a starting point for prototyping responsive HTML5 SASS projects.
+Uses gulp to create a dev environment for rapidly prototyping sites. 
 
-# Getting started
+## Features
+
+* sass compilation
+* css minification
+* css linting
+* autoprefixer (automatically adds appropriate vendor prefixes) 
+* browser reload on filesave
+* local server for serving a static site
+
+## Getting started
 
 * Create a new repo for your project on Github
 * In terminal run
@@ -27,14 +38,13 @@ Focused on mobile readability.
 To set up a convenient dev environment run this at the root of mnml
 
 ```bash
-    npm install .
-    npm install -g gulp
+npm install -g gulp browser-sync && npm install .
 ```
 
 Then run
 
 ```
-    gulp
+gulp
 ```
 
 Gulp is a javascript task runner. It compiles sass, lints the compiled css, and sets up a livereload server so you can save your fingers from pressing ⌘+r
@@ -43,12 +53,6 @@ Gulp is a javascript task runner. It compiles sass, lints the compiled css, and 
 ```bash
 git push -u origin master
 ```
-
-# What is it?
-
-Mostly a bare-bones html5 template with some basic sass partials that
-I use to start prototypes with. Also includes automated tasks for
-sass compilation, css linting, css minification, and livereload integration.
 
 ## Directory structure
 ```
@@ -61,27 +65,16 @@ sass compilation, css linting, css minification, and livereload integration.
         │   └── i.css                 (2 kb minified - 1.2kb gzipped)
         └── sass                      CSS source
             ├── _normalize.scss
+            ├── _variables.scss
             ├── _grid.scss
             ├── _type.scss
             ├── _styles.scss
             └── i.scss
 ```
 
-## Rake tasks
-
-Start sass development - watches the sass folder and updates css/i.css with every file change
-```bash
-rake sass
-```
-
-Start sass - output is minified to css/i.css
-```bash
-rake minify
-```
-
 # Author
 
-[MRMRS](http://mrmrs.cc "Adam Morse - Designer Developer")
+[MRMRS](http://mrmrs.io "Adam Morse - Designer Developer")
 
 # License
 
