@@ -2,36 +2,3 @@
    VARIABLES
    ========================================================================== */
 
-/* Colors
-   ========================================================================== */
-
-/* Don't use black */
-
-$near-black:  #111;
-$gray-dark:   #222;
-$gray-medium: #999;
-$gray-light:  #eee;
-$white:       #fff;
-
-/* Type Scale
-   ========================================================================== */
-
-/**
- * 12 & 16 as roots then powers of two.
- */
-
-$font-size-1:64px;
-$font-size-2:48px;
-$font-size-3:32px;
-$font-size-4:24px;
-$font-size-5:16px;
-$font-size-6:12px;
-
-
-/* Medium */
-$breakpoint-1-max-width:48em;
-
-/* Large */
-$breakpoint-2-min-width:48em;
-$breakpoint-2-max-width:64em;
-

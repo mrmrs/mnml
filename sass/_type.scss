@@ -1,27 +1,26 @@
 /* ==========================================================================
    TYPE
    - Copy
-   - Headings
+   - Type Scale
    ========================================================================== */
 
-/* Copy
+/* Copy ========================================================================== */
+
+.intro {      font-size: 32px; }
+blockquote {  font-size: 32px; }
+p {           font-size: 20px; }
+
+
+
+/* Type Scale
    ========================================================================== */
 
-p {           font-size: $font-size-4; }
-.intro {      font-size: $font-size-3; }
+h1,.f1 {      font-size: 64px; }
+h2,.f2 {      font-size: 48px; }
+h3,.f3 {      font-size: 32px; }
+h4,.f4 {      font-size: 24px; }
+h5,.f5 {      font-size: 20px; }
+h6,.f6 {      font-size: 16px; }
 
+.meta {       font-size: 12px; }
 
-
-/* Headings
-   ========================================================================== */
-
-h1,.h1 {      font-size: $font-size-1; }
-h2,.h2 {      font-size: $font-size-2; }
-h3,.h3 {      font-size: $font-size-3; }
-h4,.h4 {      font-size: $font-size-4; }
-h5,.h5 {      font-size: $font-size-5; }
-h6,.h6 {      font-size: $font-size-6; }
-
-.meta {       font-size: $font-size-6; }
-
-blockquote {  font-size: $font-size-2; }
