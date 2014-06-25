@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 gulp.task('minify-css', function(){
   gulp.src('./css/*.css')
     .pipe(minifyCSS({keepSpecialComments: 0}))
-    .pipe(gulp.dest('./css/'));
+    .pipe(gulp.dest('./css/i.min.css'));
 });
 
 // Use csslint without box-sizing or compatible vendor prefixes (these
