@@ -134,7 +134,11 @@ td, th { padding: 0; }
 /* Medium */
 /* Large */
 /* ========================================================================== QUERIES ========================================================================== */
-/* Mixing for mobile first queries. Two breakpoints. Use like @include break(medium) { ***Styles*** }  */
+/*
+ Mixing for mobile first queries. Two breakpoints. Use like this:
+ @include break(medium) { .class-name { color: red; } }
+
+ */
 /* ========================================================================== Media Queries
  - Not-small - Medium - Large ========================================================================== */
 /* Not-small (anything bigger than your first breakpoint) ========================================================================== */

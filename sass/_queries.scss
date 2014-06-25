@@ -4,8 +4,9 @@
 
 /*
 
-   Mixing for mobile first queries.
-   Two breakpoints.
+   Mixin for mobile-first media queries.
+   Two breakpoints are provided. Extend or modify if needed.
+
    Use like this:
 
    @include break(medium) {
