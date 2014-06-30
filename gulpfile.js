@@ -70,7 +70,7 @@ gulp.task('bs-reload', function () {
 gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
   gulp.start('pre-process', 'csslint');
   gulp.watch('sass/*.scss', ['pre-process']);
-  gulp.watch('css/*', ['bs-reload']);
+  gulp.watch('css/i.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);
 });
 
