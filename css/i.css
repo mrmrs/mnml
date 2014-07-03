@@ -127,15 +127,10 @@ td, th { padding: 0; }
 /* MNML by @mrmrs_
 */
 /* ========================================================================== VARIABLES ========================================================================== */
-/* Colors ========================================================================== */
-/* Don't use black */
-/* Type Scale ========================================================================== */
-/** 12 & 16 as roots then powers of two. */
-/* Medium */
-/* Large */
 /* ========================================================================== QUERIES ========================================================================== */
 /*
- Mixing for mobile first queries. Two breakpoints. Use like this:
+ Mixin for mobile-first media queries. Two breakpoints are provided. Extend or modify if needed.
+ Use like this:
  @include break(medium) { .class-name { color: red; } }
 
  */
@@ -144,28 +139,28 @@ td, th { padding: 0; }
 /* Not-small (anything bigger than your first breakpoint) ========================================================================== */
 /* Medium - only targets 1st breakpoint. Styles do not extend past 64em. ========================================================================== */
 /* Large - only targets 2nd breakpoint. Styles do not extend past 64em. ========================================================================== */
-/* ========================================================================== TYPE - Copy - Headings ========================================================================== */
+/* ========================================================================== TYPE - Copy - Type Scale ========================================================================== */
 /* Copy ========================================================================== */
-p { font-size: 24px; }
-
 .intro { font-size: 32px; }
 
-/* Headings ========================================================================== */
-h1, .h1 { font-size: 64px; }
+blockquote { font-size: 32px; }
 
-h2, .h2 { font-size: 48px; }
+p { font-size: 20px; }
 
-h3, .h3 { font-size: 32px; }
+/* Type Scale ========================================================================== */
+h1, .f1 { font-size: 64px; }
 
-h4, .h4 { font-size: 24px; }
+h2, .f2 { font-size: 48px; }
 
-h5, .h5 { font-size: 16px; }
+h3, .f3 { font-size: 32px; }
 
-h6, .h6 { font-size: 12px; }
+h4, .f4 { font-size: 24px; }
+
+h5, .f5 { font-size: 20px; }
+
+h6, .f6 { font-size: 16px; }
 
 .meta { font-size: 12px; }
-
-blockquote { font-size: 48px; }
 
 /* Add your sass to sass/_styles.scss */
 /* ========================================================================== Site styles ========================================================================== */

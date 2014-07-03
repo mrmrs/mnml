@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
     prefix = require('gulp-autoprefixer'),
+    size = require('gulp-size'),
+    rename = require('gulp-rename'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-ruby-sass'),
     csslint = require('gulp-csslint'),
@@ -15,15 +17,17 @@ var gulp = require('gulp'),
 // Minify all css files in the css directory
 // Run this in the root directory of the project with `gulp minify-css `
 gulp.task('minify-css', function(){
-  gulp.src('./css/*.css')
+  gulp.src('./css/i.css')
     .pipe(minifyCSS({keepSpecialComments: 0}))
-    .pipe(gulp.dest('./css/i.min.css'));
+    .pipe(rename('i.min.css'))
+    .pipe(size({gzip:true, showFiles: true}))
+    .pipe(gulp.dest('./css/'));
 });
 
 // Use csslint without box-sizing or compatible vendor prefixes (these
 // don't seem to be kept up to date on what to yell about)
 gulp.task('csslint', function(){
-  gulp.src('./css/*.css')
+  gulp.src('./css/i.css')
     .pipe(csslint({
           'compatible-vendor-prefixes': false,
           'box-sizing': false,
@@ -39,6 +43,7 @@ gulp.task('pre-process', function(){
       .pipe(watch(function(files) {
         return files.pipe(sass({loadPath: ['./sass/'], style: "compact"}))
           .pipe(prefix())
+          .pipe(size({gzip:true, showFiles: true}))
           .pipe(gulp.dest('css'))
           .pipe(browserSync.reload({stream:true}));
       }));
@@ -67,9 +72,9 @@ gulp.task('bs-reload', function () {
  • Reloads browsers when you change html or sass files
 
 */
-gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
+gulp.task('default', ['pre-process', 'minify-css', 'bs-reload', 'browser-sync'], function(){
   gulp.start('pre-process', 'csslint');
-  gulp.watch('sass/*.scss', ['pre-process']);
+  gulp.watch('sass/*.scss', ['pre-process', 'minify-css']);
   gulp.watch('css/i.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);
 });
