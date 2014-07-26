@@ -32,5 +32,8 @@
     "gulp-size": "^0.4.0",
     "gulp-util": "^2.2.18",
     "gulp-watch": "^0.6.8"
+  },
+  "scripts": {
+    "start": "gulp"
   }
 }
