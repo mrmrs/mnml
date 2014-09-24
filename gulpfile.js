@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     size = require('gulp-size'),
     rename = require('gulp-rename'),
     minifyCSS = require('gulp-minify-css'),
-    sass = require('gulp-ruby-sass'),
+    sass = require('gulp-sass'),
     csslint = require('gulp-csslint'),
     browserSync = require('browser-sync'),
     browserReload = browserSync.reload;
@@ -17,9 +17,9 @@ var gulp = require('gulp'),
 // Minify all css files in the css directory
 // Run this in the root directory of the project with `gulp minify-css `
 gulp.task('minify-css', function(){
-  gulp.src('./css/i.css')
+  gulp.src('./css/mnml.css')
     .pipe(minifyCSS({keepSpecialComments: 0}))
-    .pipe(rename('i.min.css'))
+    .pipe(rename('mnml.min.css'))
     .pipe(size({gzip:true, showFiles: true}))
     .pipe(gulp.dest('./css/'));
 });
@@ -27,7 +27,7 @@ gulp.task('minify-css', function(){
 // Use csslint without box-sizing or compatible vendor prefixes (these
 // don't seem to be kept up to date on what to yell about)
 gulp.task('csslint', function(){
-  gulp.src('./css/i.css')
+  gulp.src('./css/mnml.css')
     .pipe(csslint({
           'compatible-vendor-prefixes': false,
           'box-sizing': false,
@@ -39,9 +39,9 @@ gulp.task('csslint', function(){
 
 // Task that compiles scss files down to good old css
 gulp.task('pre-process', function(){
-  gulp.src('./sass/i.scss')
+  gulp.src('./sass/mnml.scss')
       .pipe(watch(function(files) {
-        return files.pipe(sass({loadPath: ['./sass/'], style: "compact"}))
+        return files.pipe(sass())
           .pipe(prefix())
           .pipe(size({gzip:true, showFiles: true}))
           .pipe(gulp.dest('css'))
@@ -75,7 +75,7 @@ gulp.task('bs-reload', function () {
 gulp.task('default', ['pre-process', 'minify-css', 'bs-reload', 'browser-sync'], function(){
   gulp.start('pre-process', 'csslint');
   gulp.watch('sass/*.scss', ['pre-process', 'minify-css']);
-  gulp.watch('css/i.css', ['bs-reload']);
+  gulp.watch('css/mnml.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);
 });
 
