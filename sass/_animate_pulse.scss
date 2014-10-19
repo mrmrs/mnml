@@ -1,0 +1,19 @@
+@-webkit-keyframes pulsate {
+    0% {
+      background: #fff;
+    }
+
+    50% {
+      background: #f6f6f6;
+    }
+
+    100% {
+      background: #fff;
+    }
+}
+
+.bg-pulsate {
+    -webkit-animation: pulsate 2s linear infinite;
+    animation: pulsate 2s linear infinite
+}
+

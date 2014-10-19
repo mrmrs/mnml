@@ -9,78 +9,95 @@
     <meta name="author" content="mrmrs">
     <meta name="description" content="minimal template to building reponsive websites with html5 and sass">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/mnml.min.css">
+    <link rel="stylesheet" href="css/tachyons.min.css">
   </head>
   <body>
-    <header class="site-header bg-dark header-padding">
-      <h1 class="h1 site-title no-margin site-logo mega center lh-1 padding-top">mnml</h1>
-      <h2 class="sans-serif caps title-spacing tagline center">A light-weight template for responsive, html5 / scss projects.</h2>
-      <div style="display:block; text-align:center; margin-top: 1.5rem;">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mn-ml.cc" data-text="MNML: A light-weight template for prototyping with html5 in the browser" data-via="mrmrs_" data-size="large">Tweet this</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+    <header style="background:black url(img/sf.jpg) no-repeat top center;background-size: cover;" class="bg-cv ptl pbx pvxl-ns phl" >
+      <div class="dt">
+      <div class="dtc-ns wi-100 wi-50-ns v-mid ba b--white-50 plm pvm mbm mbn-ns">
+        <h1 class="mvn mega f1-m mega-l ttu white" style="line-height: 1; ">mnml </h1>
+        <small class="gray db small fw4">v.2.0.0</small>
       </div>
-    </header>
-    <div class="polaroid-padding  bg-second">
-      <div class=" downloads center">
-        <a href="https://github.com/mrmrs/mnml" class="link-highlight hover fork-me gray-border" title="MNML - A light-weight boilerplate for responsive html5/sass projects.">Fork on github</a><br>
-        <a href="https://github.com/mrmrs/mnml/zipball/master" class="link-highlight hover dl-link gray-border">Download as <b>.zip</b></a>
+      <div class="wi-100 wi-50-ns dtc-ns v-mid ba b--white-50 plm bln pvm pvn-l">
+        <h2 class="mtn f5 f4-ns fw4 dark-gray">A simple template for designing in the browser</h2>
+          <a href="https://twitter.com/share" class="btn white phm pvs f5 bg-twitter b--twitter">Tweet</a>
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </div>
     </div>
-      <div class="content-wrapper bg-third padding-top">
-    <div class="content">
-      <h1 class="center caps lh-1 section-title section-margin">What is it?</h1>
-      <h2 class="small-title sans-serif caps">Features</h2>
-      <h2 class="h2">HTML5 template</h2>
-      <p>
-        Just the basics. An HTML5 doctype. A single css file include. A title tag and some meta tags. It's waiting for your content.
-      </p>
-      <h2 class="h2 margin-top-20">Readable type. On any device.</h2>
-      <p>
-        Not all screens are the same. Make sure your type is readable no matter what device people are reading your content on.
-        MNML provides a set of smarter type defaults for better responsive typography. The type scale is easily configurable.
-      </p>
-      <h2 class="h2  margin-top-20">Basic SCSS organization</h2>
-      <p>
-        Start off with only what you need. Modularized to make it easy to add or subtract partials as you see fit.
-      </p>
-<pre>
+    <p class="f4 f2-ns mtn mbn ba b--white-50 pvm mtm phm">
+          <a class="dib b pvs link black" href="https://github.com/mrmrs/mnml/zipball/master" >Download</a>
+          or 
+          <a class="dib b pvs link black" href="https://github.com/mrmrs/mnml" >Fork</a>
+          the code
+        </p>
+    </header>
+    <main class="phl mw7 center pvl pvx-ns">
+        <h2 class="fw4">Features</h2>
+        <h2 >Light as a feather</h2>
+        <p>
+          Included css is less than 2kb minified and 1.2kb gzipped. MNML is just that, minimal.
+        </p>
+        <h2 class="ttu fw4 f4">HTML5 template</h2>
+<div class="ofx-aut">
+        <pre class="bg-white phl pvm br2 ba b--light-gray dib">
+<code class="f5" style="font-size:12px;">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=Edge"&gt;
+    &lt;title&gt; &lt;/title&gt;
+    &lt;meta name="author" content=""&gt;
+    &lt;meta name="description" content=""&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link rel="stylesheet" href="css/mnml.min.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code>
+        </pre>
+</div>
+        <h2 >Readable type. On any device.</h2>
+        <p>
+          Not all screens are the same. Make sure your type is readable no matter what device people are reading your content on.
+          MNML provides a set of smarter type defaults for better responsive typography. 
+        </p>
+        <h2 >Basic SCSS organization</h2>
+        <p>
+          Start off with only what you need. Modularized to make it easy to add or subtract partials as you see fit.
+        </p>
+<pre class="f5">
 └── sass
     ├── _variables.scss
     ├── _normalize.scss
+    ├── _base.scss
     ├── _type.scss
-    ├── _grid.scss
     ├── _styles.scss
-    └── i.scss
+    └── mnml.scss
 </pre>
-
-      <h2 class="h2  margin-top-20">Light as a feather</h2>
-      <p>
-        Included css is 2kb minified and 1.2kb gzipped. MNML is just that, minimal.
-      </p>
-      <h2 class="h2  margin-top-20">Media queries for mobile &amp; tablet devices</h2>
-      <p>
-        Media queries for two breakpoints. Widths are configurable. Queries can be extended or removed as desired.
-      </p>
-      <h2 class="h2  margin-top-20">Rake tasks</h2>
-      <p>Simple gulp tasks for running sass, minifying css and images, plus browser-sync - which reloads the browsers on file save.</p>
-    </div>
-  </div>
-  <div class="section-padding center bug-report">
-    <a href="http://github.com/mrmrs/mnml/issues" class="link-highlight issue-hover mobile-small">
-      <b>Find a bug?</b> Open an issue ▸
-    </a>
-  </div>
-  <footer class="site-footer center">
-    <a href="http://mrmrs.cc" class="text-link maker" title="MRMRS - San Francisco based designer / developer">
-      <span class="mobile-hide">Made by</span>
-      MRMRS
-    </a>
-    <a href="http://github.com/mrmrs" class="caps title-spacing text-link" title="MRMRS on Github">Github</a>
-    <a href="http://twitter.com/mrmrs_" class="caps title-spacing text-link" title="MRMRS on Twitter">Twitter</a>
-    <a href="mailto:hi@mrmrs.cc" class="caps title-spacing text-link" title="Email hi@mrmrs.cc">hi@mrmrs.cc</a>
-    <a class="meta padding-top-half text-link db" href="http://github.com/mrmrs/mnml" title="MNML">Built using MNML.</a>
-    <a class="meta  text-link db" href="http://opensource.org/licenses/MIT" title="MIT">License: MIT</a>
-  </footer>
+        <h2 >Media queries for tablet &amp; desktop devices</h2>
+        <p>
+          Media queries for two breakpoints. Widths are configurable. Queries can be extended or removed as desired.
+        </p>
+        <h2>Gulp tasks</h2>
+        <p>Simple gulp tasks for running sass, minifying css and images, plus browser-sync - which reloads the browsers on file save.</p>
+    </main>
+    <footer class="pvx bt bg-black b--near-white phl phx-ns">
+      <a href="http://mrmrs.cc" class="white link db lh-copy">
+        <span class="white">Built with love by </span>
+        <b class="white">mrmrs</b>
+      </a>
+      <ul class="list pln">
+        <li><a class="link" href="http://github.com/mrmrs" >Github</a></li>
+        <li><a class="link" href="http://twitter.com/mrmrs_" >Twitter</a></li>
+        <li><a class="link" href="mailto:hi@mrmrs.cc" >hi@mrmrs.cc</a></li>
+      </ul>
+      <a class="link white" href="/">Built using MNML.</a>
+      <a class="link white" href="http://tachyons.io">and Tachyons</a>
+      <a >License: MIT</a>
+    </footer>
 
     <script src="javascripts/scale.fix.js"></script>
     <script type="text/javascript">
@@ -90,7 +107,7 @@
     <script type="text/javascript">
       try {
         var pageTracker = _gat._getTracker("UA-35858753-1");
-      pageTracker._trackPageview();
+        pageTracker._trackPageview();
       } catch(err) {}
     </script>
   </body>
