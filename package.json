@@ -37,7 +37,7 @@
   "scripts": {
     "start": "gulp",
     "csslint": "gulp csslint",
-    "minify-css": "gulp minify-css"
+    "minify-css": "gulp minify-css",
     "images": "gulp minify-img"
   }
 }
