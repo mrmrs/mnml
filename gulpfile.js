@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     prefix = require('gulp-autoprefixer'),
     size = require('gulp-size'),
     rename = require('gulp-rename'),
+    imagemin = require('gulp-imagemin'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
     csslint = require('gulp-csslint'),
@@ -22,6 +23,16 @@ gulp.task('minify-css', function(){
     .pipe(rename('mnml.min.css'))
     .pipe(size({gzip:true, showFiles: true}))
     .pipe(gulp.dest('./css/'));
+});
+
+gulp.task('minify-img', function(){
+  gulp.src('./img/*')
+    .pipe(imagemin({
+        progressive: true,
+        svgoPlugins: [{removeViewBox: false}],
+        use: [pngcrush()]
+    }))
+    .pipe(gulp.dest('./img/'));
 });
 
 // Use csslint without box-sizing or compatible vendor prefixes (these
@@ -79,7 +90,7 @@ gulp.task('bs-reload', function () {
 
 */
 gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
-  gulp.start('pre-process', 'csslint');
+  gulp.start('pre-process', 'csslint', 'minify-img');
   gulp.watch('sass/*.scss', ['pre-process']);
   gulp.watch('css/mnml.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);
