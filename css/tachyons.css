@@ -1330,8 +1330,8 @@ img {
 */
 .link {
   text-decoration: none;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s; }
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s; }
 
 .link:link {
   color: #30BBDB; }
@@ -1350,6 +1350,22 @@ img {
 
 .underline-hover:hover {
   text-decoration: underline; }
+
+.dark-link {
+  -webkit-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out; }
+
+.dark-link:link {
+  color: #333; }
+
+.dark-link:hover {
+  color: #B10DC9; }
+
+.dark-link:visited {
+  color: #333; }
+
+.dark-link:active {
+  color: #000; }
 
 /*
 
@@ -2464,7 +2480,14 @@ img {
   transition: border-color 0.1s ease-out; }
 
 .bg-twitter {
-  background-color: #55acee; }
+  background-color: #55acee;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in; }
+
+.bg-twitter:hover {
+  background-color: #168ce0;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in; }
 
 .b--twitter {
   border-color: #55acee; }

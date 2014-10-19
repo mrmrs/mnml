@@ -1,2 +1,13 @@
-.bg-twitter { background-color: #55acee; }
-.b--twitter { border-color: #55acee; }
+.bg-twitter { 
+  background-color: #55acee; 
+  transition: background-color .15s ease-in;
+}
+
+.bg-twitter:hover { 
+  background-color: darken(#55acee, 15%); 
+  transition: background-color .15s ease-in;
+}
+
+.b--twitter { 
+  border-color: #55acee; 
+}

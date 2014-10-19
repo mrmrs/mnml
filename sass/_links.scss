@@ -6,7 +6,7 @@
 
 .link {
   text-decoration: none;
-  transition: all .4s;
+  transition: color .4s;
 }
 
 .link:link    { color: #30BBDB; }
@@ -16,3 +16,9 @@
 
 .underline { text-decoration: underline; }
 .underline-hover:hover { text-decoration: underline; }
+
+.dark-link { transition: color .2s ease-out; }
+.dark-link:link       { color: #333; }
+.dark-link:hover      { color: $purple; }
+.dark-link:visited      { color: #333; }
+.dark-link:active      { color: #000; }
