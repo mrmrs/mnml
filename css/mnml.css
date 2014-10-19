@@ -342,24 +342,8 @@ td, th {
 
 
  */
-/* ==========================================================================
-   Media Queries
-
-   - Not-small
-   - Medium
-   - Large
-   ========================================================================== */
-/* Not-small (anything bigger than your first breakpoint)
-   ========================================================================== */
-@media screen and (min-width: 48em) { }
-
-/* Medium - only targets 1st breakpoint. Styles do not extend past 64em.
-   ========================================================================== */
-@media screen and (min-width: 48em) and (max-width: 64em) { }
-
-/* Large - only targets 2nd breakpoint. Styles do not extend past 64em.
-   ========================================================================== */
-@media screen and (min-width: 64em) { }
+html, body {
+  height: 100%; }
 
 /* ==========================================================================
    TYPE
@@ -402,3 +386,21 @@ small, .small {
 /* ==========================================================================
    Site styles
    ========================================================================== */
+/* ==========================================================================
+   Media Queries
+
+   - Medium and large
+   - Medium
+   - Large
+   ========================================================================== */
+/* Medium and Up - Targets everything larger than mobile
+   ========================================================================== */
+@media screen and (min-width: 32em) { }
+
+/* Medium - only targets 1st breakpoint. Styles 
+   ========================================================================== */
+@media screen and (min-width: 32em) and (max-width: 48em) { }
+
+/* Large - only targets 2nd breakpoint. 
+   ========================================================================== */
+@media screen and (min-width: 48em) { }
