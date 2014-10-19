@@ -18,7 +18,8 @@
 .underline-hover:hover { text-decoration: underline; }
 
 .dark-link { transition: color .2s ease-out; }
-.dark-link:link       { color: #333; }
-.dark-link:hover      { color: $purple; }
+.dark-link:link       { color: #333!important; }
+.dark-link:hover      { color: $white!important; }
 .dark-link:visited      { color: #333; }
 .dark-link:active      { color: #000; }
+.dark-link:focus      { color: #000; }

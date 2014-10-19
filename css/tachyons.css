@@ -1356,15 +1356,18 @@ img {
   transition: color 0.2s ease-out; }
 
 .dark-link:link {
-  color: #333; }
+  color: #333 !important; }
 
 .dark-link:hover {
-  color: #B10DC9; }
+  color: #fff !important; }
 
 .dark-link:visited {
   color: #333; }
 
 .dark-link:active {
+  color: #000; }
+
+.dark-link:focus {
   color: #000; }
 
 /*
