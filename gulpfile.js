@@ -18,7 +18,7 @@ var gulp = require('gulp'),
 // Run this in the root directory of the project with `gulp minify-css `
 gulp.task('minify-css', function(){
   gulp.src('./css/mnml.css')
-    .pipe(minifyCSS({keepSpecialComments: 0}))
+    .pipe(minifyCSS())
     .pipe(rename('mnml.min.css'))
     .pipe(size({gzip:true, showFiles: true}))
     .pipe(gulp.dest('./css/'));
@@ -43,8 +43,14 @@ gulp.task('pre-process', function(){
       .pipe(watch(function(files) {
         return files.pipe(sass())
           .pipe(prefix())
-          .pipe(size({gzip:true, showFiles: true}))
+          .pipe(size({gzip: false, showFiles: true}))
+          .pipe(size({gzip: true, showFiles: true}))
           .pipe(gulp.dest('css'))
+          .pipe(minifyCSS())
+          .pipe(rename('mnml.min.css'))
+          .pipe(size({gzip: false, showFiles: true}))
+          .pipe(size({gzip: true, showFiles: true}))
+          .pipe(gulp.dest('./css/'))
           .pipe(browserSync.reload({stream:true}));
       }));
 });
@@ -72,9 +78,9 @@ gulp.task('bs-reload', function () {
  • Reloads browsers when you change html or sass files
 
 */
-gulp.task('default', ['pre-process', 'minify-css', 'bs-reload', 'browser-sync'], function(){
+gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
   gulp.start('pre-process', 'csslint');
-  gulp.watch('sass/*.scss', ['pre-process', 'minify-css']);
+  gulp.watch('sass/*.scss', ['pre-process']);
   gulp.watch('css/mnml.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);
 });
