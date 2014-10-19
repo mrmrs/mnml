@@ -30,7 +30,6 @@ gulp.task('minify-img', function(){
     .pipe(imagemin({
         progressive: true,
         svgoPlugins: [{removeViewBox: false}],
-        use: [pngcrush()]
     }))
     .pipe(gulp.dest('./img/'));
 });
