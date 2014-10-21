@@ -38,20 +38,22 @@ Uses gulp to create a dev environment for rapidly prototyping sites.
 To set up a convenient dev environment run this at the root of mnml
 
 ```bash
-npm install -g gulp browser-sync && npm install .
+npm install .
 ```
 
 Then run
 
 ```
-gulp
+npm start
 ```
 
-Gulp is a javascript task runner. It compiles sass, lints the compiled css, and sets up a livereload server so you can save your fingers from pressing ⌘+r
+Gulp is a javascript task runner. It compiles sass, lints the compiled css, and
+sets up a browser-sync server so you can save your fingers from pressing ⌘+TAB + ⌘+r 
+every time you save a file.
 
 * Once you add & commit files you are ready to publish run:
 ```bash
-git push -u origin master
+git push origin master
 ```
 
 ## Directory structure
@@ -60,16 +62,17 @@ git push -u origin master
         ├── README.md
         ├── gulpfile.js
         ├── package.json
-        ├── index.html                (386 bytes)
+        ├── index.html                
         ├── css
-        │   └── i.css                 (2 kb minified - 1.2kb gzipped)
-        └── sass                      CSS source
+        │   └── mnml.css              (10kb / 3.04 gzipped)
+        │   └── mnml.min.css          (2.27 kb minified - 989B gzipped)
+        └── sass                      CSS source files
             ├── _normalize.scss
             ├── _variables.scss
-            ├── _grid.scss
+            ├── _base.scss
             ├── _type.scss
             ├── _styles.scss
-            └── i.scss
+            └── mnml.scss
 ```
 
 # Author
