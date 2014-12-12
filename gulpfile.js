@@ -1,6 +1,6 @@
 // Gulp tasks for MNML
 
-// Load plugins 
+// Load plugins
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
+    uncss = require('gulp-uncss'),
     csslint = require('gulp-csslint'),
     browserSync = require('browser-sync'),
     browserReload = browserSync.reload;
@@ -17,13 +18,6 @@ var gulp = require('gulp'),
 
 // Minify all css files in the css directory
 // Run this in the root directory of the project with `gulp minify-css `
-gulp.task('minify-css', function(){
-  gulp.src('./css/tachyons.css')
-    .pipe(minifyCSS())
-    .pipe(rename('tachyons.min.css'))
-    .pipe(size({gzip:true, showFiles: true}))
-    .pipe(gulp.dest('./css/'));
-});
 
 gulp.task('minify-img', function(){
   gulp.src('./img/*')
@@ -56,6 +50,10 @@ gulp.task('pre-process', function(){
           .pipe(size({gzip: false, showFiles: true}))
           .pipe(size({gzip: true, showFiles: true}))
           .pipe(gulp.dest('css'))
+          .pipe(uncss({
+            html: ['index.html'],
+            ignore: [':hover', ':focus', ':visited', ':link', ':active']
+          }))
           .pipe(minifyCSS())
           .pipe(rename('tachyons.min.css'))
           .pipe(size({gzip: false, showFiles: true}))
@@ -65,7 +63,7 @@ gulp.task('pre-process', function(){
       }));
 });
 
-// Initialize browser-sync which starts a static server also allows for 
+// Initialize browser-sync which starts a static server also allows for
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
