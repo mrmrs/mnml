@@ -5,14 +5,14 @@
 View the project page at [http://mn-ml.cc](http://mn-ml.cc "MNML - A light-weight responsive html5 boilerplate.")
 
 MNML is a starting point for prototyping responsive HTML5 SASS projects.
-Uses gulp to create a dev environment for rapidly prototyping sites. 
+Uses gulp to create a dev environment for rapidly prototyping sites.
 
 ## Features
 
 * sass compilation
 * css minification
 * css linting
-* autoprefixer (automatically adds appropriate vendor prefixes) 
+* autoprefixer (automatically adds appropriate vendor prefixes)
 * browser reload on filesave
 * local server for serving a static site
 
@@ -80,7 +80,7 @@ git push -u origin master
 
 The MIT License (MIT)
 
-Copyright (c) 2014 @mrmrs
+Copyright (c) 2015 @mrmrs
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
