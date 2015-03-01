@@ -1,6 +1,6 @@
 // Gulp tasks for MNML
 
-// Load plugins 
+// Load plugins
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
@@ -52,6 +52,7 @@ gulp.task('pre-process', function(){
   gulp.src('./sass/mnml.scss')
       .pipe(watch(function(files) {
         return files.pipe(sass())
+          .on('error', swallowError)
           .pipe(prefix())
           .pipe(size({gzip: false, showFiles: true}))
           .pipe(size({gzip: true, showFiles: true}))
@@ -65,7 +66,7 @@ gulp.task('pre-process', function(){
       }));
 });
 
-// Initialize browser-sync which starts a static server also allows for 
+// Initialize browser-sync which starts a static server also allows for
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
     browserSync.init(null, {
@@ -95,3 +96,8 @@ gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
   gulp.watch('*.html', ['bs-reload']);
 });
 
+// Prevent errors from breaking the gulp but still display details of the error
+function swallowError (error) {
+    console.log(error.toString());
+    this.emit('end');
+}
