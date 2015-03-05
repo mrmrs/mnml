@@ -49,8 +49,8 @@ gulp.task('csslint', function(){
 
 // Task that compiles scss files down to good old css
 gulp.task('pre-process', function(){
-    watch("./sass/*", function(files) {
-      return files.pipe(sass())
+    return gulp.src("./sass/mnml.scss")
+        .pipe(sass())
         .pipe(prefix())
         .pipe(size({gzip: false, showFiles: true}))
         .pipe(size({gzip: true, showFiles: true}))
@@ -61,7 +61,6 @@ gulp.task('pre-process', function(){
         .pipe(size({gzip: true, showFiles: true}))
         .pipe(gulp.dest('./css/'))
         .pipe(browserSync.reload({stream:true}));
-    });
 });
 
 // Initialize browser-sync which starts a static server also allows for
