@@ -49,7 +49,7 @@ gulp.task('csslint', function(){
 
 // Task that compiles scss files down to good old css
 gulp.task('pre-process', function(){
-    watch("./sass/mnml.scss", function(files) {
+    watch("./sass/*", function(files) {
       return files.pipe(sass())
         .pipe(prefix())
         .pipe(size({gzip: false, showFiles: true}))
@@ -89,7 +89,7 @@ gulp.task('bs-reload', function () {
 */
 gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
   gulp.start('pre-process', 'csslint', 'minify-img');
-  gulp.watch('sass/*.scss', ['pre-process']);
+  gulp.watch('sass/*', ['pre-process']);
   gulp.watch('css/mnml.css', ['bs-reload']);
   gulp.watch('*.html', ['bs-reload']);
 });
