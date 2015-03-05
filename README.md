@@ -5,21 +5,26 @@
 View the project page at [http://mn-ml.cc](http://mn-ml.cc "MNML - A light-weight responsive html5 boilerplate.")
 
 MNML is a starting point for prototyping responsive HTML5 SASS projects.
-Uses gulp to create a dev environment for rapidly prototyping sites. 
+Uses gulp to create a dev environment for rapidly prototyping sites.
 
 ## Features
 
 * sass compilation
 * css minification
 * css linting
-* autoprefixer (automatically adds appropriate vendor prefixes) 
+* autoprefixer (automatically adds appropriate vendor prefixes)
 * browser reload on filesave
 * local server for serving a static site
 
 ## Getting started
 
+Watch [this screencast](https://vimeo.com/121332805) on getting mnml setup or
+follow the directions below.
+
+### Instructions
+
 * Create a new repo for your project on Github
-* In terminal run
+* In terminal run each line as a separate command
 ```bash
     git clone git@github.com:mrmrs/mnml.git yourNewRepoName
     cd yourNewRepoName
@@ -38,17 +43,11 @@ Uses gulp to create a dev environment for rapidly prototyping sites.
 To set up a convenient dev environment run this at the root of mnml
 
 ```bash
-npm install .
-```
-
-Then run
-
-```
-npm start
+npm install && npm start
 ```
 
 Gulp is a javascript task runner. It compiles sass, lints the compiled css, and
-sets up a browser-sync server so you can save your fingers from pressing ⌘+TAB + ⌘+r 
+sets up a browser-sync server so you can save your fingers from pressing ⌘+TAB + ⌘+r
 every time you save a file.
 
 * Once you add & commit files you are ready to publish run:
@@ -62,7 +61,7 @@ git push origin master
         ├── README.md
         ├── gulpfile.js
         ├── package.json
-        ├── index.html                
+        ├── index.html
         ├── css
         │   └── mnml.css              (10kb / 3.04 gzipped)
         │   └── mnml.min.css          (2.27 kb minified - 989B gzipped)
