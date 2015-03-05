@@ -1,6 +1,6 @@
 // Gulp tasks for MNML
 
-// Load plugins 
+// Load plugins
 var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
@@ -49,26 +49,25 @@ gulp.task('csslint', function(){
 
 // Task that compiles scss files down to good old css
 gulp.task('pre-process', function(){
-  gulp.src('./sass/mnml.scss')
-      .pipe(watch(function(files) {
-        return files.pipe(sass())
-          .pipe(prefix())
-          .pipe(size({gzip: false, showFiles: true}))
-          .pipe(size({gzip: true, showFiles: true}))
-          .pipe(gulp.dest('css'))
-          .pipe(minifyCSS())
-          .pipe(rename('mnml.min.css'))
-          .pipe(size({gzip: false, showFiles: true}))
-          .pipe(size({gzip: true, showFiles: true}))
-          .pipe(gulp.dest('./css/'))
-          .pipe(browserSync.reload({stream:true}));
-      }));
+    watch("./sass/mnml.scss", function(files) {
+      return files.pipe(sass())
+        .pipe(prefix())
+        .pipe(size({gzip: false, showFiles: true}))
+        .pipe(size({gzip: true, showFiles: true}))
+        .pipe(gulp.dest('css'))
+        .pipe(minifyCSS())
+        .pipe(rename('mnml.min.css'))
+        .pipe(size({gzip: false, showFiles: true}))
+        .pipe(size({gzip: true, showFiles: true}))
+        .pipe(gulp.dest('./css/'))
+        .pipe(browserSync.reload({stream:true}));
+    });
 });
 
-// Initialize browser-sync which starts a static server also allows for 
+// Initialize browser-sync which starts a static server also allows for
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
-    browserSync.init(null, {
+    browserSync({
         server: {
             baseDir: "./"
         }
