@@ -51,6 +51,7 @@ gulp.task('csslint', function(){
 gulp.task('pre-process', function(){
     return gulp.src("./sass/mnml.scss")
         .pipe(sass())
+        .on('error', swallowError)
         .pipe(prefix())
         .pipe(size({gzip: false, showFiles: true}))
         .pipe(size({gzip: true, showFiles: true}))
@@ -77,6 +78,14 @@ gulp.task('browser-sync', function() {
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
+
+
+// Allows gulp to not break after a sass error.
+// Spits error out to console
+function swallowError(error) {
+  console.log(error.toString());
+  this.emit('end');
+}
 
 /*
    DEFAULT TASK
