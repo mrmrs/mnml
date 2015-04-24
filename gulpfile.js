@@ -50,7 +50,7 @@ gulp.task('csslint', function(){
 // Task that compiles scss files down to good old css
 gulp.task('pre-process', function(){
     return gulp.src("./sass/mnml.scss")
-        .pipe(sass())
+        .pipe(sass({sourceComments: 'map'}))
         .on('error', swallowError)
         .pipe(prefix())
         .pipe(size({gzip: false, showFiles: true}))
