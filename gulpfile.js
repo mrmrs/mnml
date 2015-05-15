@@ -11,7 +11,7 @@ var gulp = require('gulp'),
     minifyCSS = require('gulp-minify-css'),
     sass = require('gulp-sass'),
     csslint = require('gulp-csslint'),
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync').create('mnml'),
     browserReload = browserSync.reload;
 
 
@@ -61,24 +61,16 @@ gulp.task('pre-process', function(){
         .pipe(size({gzip: false, showFiles: true}))
         .pipe(size({gzip: true, showFiles: true}))
         .pipe(gulp.dest('./css/'))
-        .pipe(browserSync.reload({stream:true}));
+        .pipe(browserSync.stream({match: '**/*.css'}));
 });
 
 // Initialize browser-sync which starts a static server also allows for
 // browsers to reload on filesave
 gulp.task('browser-sync', function() {
-    browserSync({
-        server: {
-            baseDir: "./"
-        }
+    browserSync.init({
+        server: true
     });
 });
-
-// Function to call for reloading browsers
-gulp.task('bs-reload', function () {
-    browserSync.reload();
-});
-
 
 // Allows gulp to not break after a sass error.
 // Spits error out to console
@@ -95,10 +87,9 @@ function swallowError(error) {
  • Reloads browsers when you change html or sass files
 
 */
-gulp.task('default', ['pre-process', 'bs-reload', 'browser-sync'], function(){
+gulp.task('default', ['pre-process', 'browser-sync'], function(){
   gulp.start('pre-process', 'csslint', 'minify-img');
   gulp.watch('sass/*', ['pre-process']);
-  gulp.watch('css/mnml.css', ['bs-reload']);
-  gulp.watch('*.html', ['bs-reload']);
+  gulp.watch('*.html', browserReload);
 });
 
