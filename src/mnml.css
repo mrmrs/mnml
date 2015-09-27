@@ -1,20 +1,28 @@
 /*
+
    MNML by @mrmrs_
+   All these files are pretty much empty!
+   You get to fill them out all by yourself.
+
 */
 
 @import "./lib/_normalize";
-$layout-debug: false;
-@if $layout-debug == true {
-  @import "./_debug";
-}
-
 
 @import "./_variables";
-@import "./_queries";
+@import "./_media-queries";
 
 @import "./_base";
-@import "./_type";
+@import "./_typography";
 
-/* Add your custom styles to this file or create new
- * partials and add them here */
 @import "./_styles";
+
+/*
+
+ DEBUGGING
+ If you want to debug your layout you can uncomment the following
+ partial to apply an outline of a different color
+ to every element on the page
+
+*/
+
+/*  @import "./_debug"; */

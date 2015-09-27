@@ -1,4 +1,18 @@
-/* ==========================================================================
+/*
    VARIABLES
-   ========================================================================== */
+   Add your variables to the :root selector.
+   Then reference them in your other css modules like so
 
+   :root {
+      --spacing-small: 32px;
+   }
+
+   .someClass {
+     padding: var(--spacing-small)
+   }
+
+*/
+
+:root {
+
+}

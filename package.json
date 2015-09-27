@@ -13,7 +13,7 @@
     "readability",
     "responsive design",
     "rwd",
-    "sass"
+    "postcss"
   ],
   "author": "mrmrs",
   "license": "MIT",
@@ -24,15 +24,17 @@
   "devDependencies": {
     "autoprefixer": "^6.0.3",
     "browser-sync": "^2.9.6",
+    "node-minify": "^1.2.1",
     "postcss": "^5.0.8",
     "postcss-browser-reporter": "^0.4.0",
     "postcss-conditionals": "^2.0.0",
     "postcss-css-variables": "^0.5.0",
-    "postcss-custom-properties": "^5.0.0",
+    "postcss-custom-media": "^5.0.0",
     "postcss-import": "^7.0.0",
     "watch": "^0.16.0"
   },
   "scripts": {
-
+    "start": "node index.js",
+    "build:css": "watch 'node index.js' ."
   }
 }

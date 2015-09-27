@@ -1,33 +1,44 @@
 /* ==========================================================================
-   Site styles
-   ========================================================================== */
+   SITE STYLES
 
-/* ==========================================================================
-   Media Queries
-
-   - Medium and large
+   - Mobile first
+   - Medium and Large
    - Medium
    - Large
    ========================================================================== */
 
 
+
+
+/* Mobile-first classes here (No media query needed, these styles are global)
+   ========================================================================== */
+
+
+
+
 /* Medium and Up - Targets everything larger than mobile
    ========================================================================== */
 
-@include break(medium-and-large) {
+@media (--breakpont-medium-and-up) {
 
 }
 
-/* Medium - only targets 1st breakpoint. Styles 
+
+
+
+/* Medium - only targets 1st breakpoint. Styles
    ========================================================================== */
 
-@include break(medium) {
+@media (--breakpont-medium) {
 
 }
 
-/* Large - only targets 2nd breakpoint. 
+
+
+
+/* Large - only targets 2nd breakpoint.
    ========================================================================== */
 
-@include break(large) {
+@media (--breakpont-large) {
 
 }

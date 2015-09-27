@@ -1,0 +1,25 @@
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+
+/*
+
+  These breakpoints can be extended or modified to your hearts content
+
+  You can use like this:
+
+  @media (--breakpoint-medium-and-up) {
+      Your breakpoint styles here.
+      Don't forget to make them mobile first :)
+  }
+
+  You can also use media queries to target more than just a devices window width.
+  Checkout the css4 spec for more info.
+
+
+*/
+
+
+@custom-media --breakpoint-medium-and-up screen and (min-width: 32em);
+@custom-media --breakpoint-medium screen and (min-width: 32em) and (max-width: 64em);
+@custom-media --breakpoint-large screen and (min-width: 64em);
