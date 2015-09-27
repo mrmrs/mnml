@@ -25,6 +25,7 @@
     "autoprefixer": "^6.0.3",
     "browser-sync": "^2.9.6",
     "node-minify": "^1.2.1",
+    "parallelshell": "^2.0.0",
     "postcss": "^5.0.8",
     "postcss-browser-reporter": "^0.4.0",
     "postcss-conditionals": "^2.0.0",
@@ -34,7 +35,8 @@
     "watch": "^0.16.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "build:css": "watch 'node index.js' ."
+    "start": "parallelshell 'npm run build:css' 'npm run server'",
+    "build:css": "watch 'node index.js' src/",
+    "server": "browser-sync start --files './*'"
   }
 }
