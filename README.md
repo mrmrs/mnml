@@ -73,10 +73,10 @@ mnml/
 
 # Contributors
 
-Xiao (Sean) Wu
-Chris Bracco
-Andrés Olivares
-Amira Hailemariam
+- Xiao (Sean) Wu
+- Chris Bracco
+- Andrés Olivares
+- Amira Hailemariam
 
 # License
 
