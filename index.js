@@ -26,7 +26,7 @@ var output = postcss([autoprefixer])
 
 fs.writeFile("css/mnml.css", output, 'utf-8')
 
-// Using YUI Compressor for CSS
+// Using Sqwish for CSS
 new compressor.minify({
     type: 'sqwish',
     fileIn: './css/mnml.css',
