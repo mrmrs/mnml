@@ -37,6 +37,6 @@
   "scripts": {
     "start": "parallelshell 'npm run build:css' 'npm run server'",
     "build:css": "watch 'node index.js' src/",
-    "server": "browser-sync start --server --files './**/*'"
+    "server": "browser-sync start --server --files 'css/*.css, *.html'"
   }
 }
