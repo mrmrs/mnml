@@ -35,11 +35,15 @@ Uses gulp to create a dev environment for rapidly prototyping sites.
     origin git@github.com:yourUserName/yourNewRepoName.git (push)
 ```
 
-## Dev environment
-To set up a convenient dev environment run this at the root of mnml
-
+* Install development packages
 ```bash
-npm install && npm start
+	npm install
+```
+
+## Dev environment
+To start the dev environment run this at the root of mnml
+```bash
+	npm start
 ```
 
 
