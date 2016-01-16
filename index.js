@@ -13,15 +13,18 @@ var customMedia = require("postcss-custom-media")
 var css = fs.readFileSync("src/mnml.css", "utf8")
 
 // process css
-postcss([autoprefixer])
+var output = postcss([autoprefixer])
   .use(atImport())
   .use(cssvariables())
   .use(conditionals())
   .use(customMedia())
-  .process(css)
-  .then(function (result) {
-    fs.writeFile("css/mnml.css", result.css, 'utf-8')
-});
+  .process(css, {
+    from: "./src/mnml.css",
+    to: "./css/mnml.css"
+  })
+  .css
+
+fs.writeFile("css/mnml.css", output, 'utf-8')
 
 // Using Sqwish for CSS
 new compressor.minify({
