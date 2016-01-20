@@ -5,11 +5,11 @@
 View the project page at [http://mn-ml.cc](http://mn-ml.cc "MNML - A light-weight responsive html5 boilerplate.")
 
 MNML is a starting point for prototyping responsive HTML5 PostCSS projects.
-Uses gulp to create a dev environment for rapidly prototyping sites.
+Uses postcss and browser-sync to create a dev environment for rapidly prototyping static sites.
 
 ## Features
 
-* css compiling with postcss
+* css compilation with postcss
 * css minification
 * autoprefixer (automatically adds appropriate vendor prefixes)
 * browser reload on filesave using browser-sync
