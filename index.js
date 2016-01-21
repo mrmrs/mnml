@@ -13,11 +13,12 @@ var customMedia = require("postcss-custom-media")
 var css = fs.readFileSync("src/mnml.css", "utf8")
 
 // process css
-var output = postcss([autoprefixer])
+var output = postcss()
   .use(atImport())
   .use(cssvariables())
   .use(conditionals())
   .use(customMedia())
+  .use(autoprefixer())
   .process(css, {
     from: "./src/mnml.css",
     to: "./css/mnml.css"
