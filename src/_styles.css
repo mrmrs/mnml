@@ -19,7 +19,7 @@
 /* Medium and Up - Targets everything larger than mobile
    ========================================================================== */
 
-@media (--breakpont-medium-and-up) {
+@media (--breakpoint-medium-and-up) {
 
 }
 
@@ -29,7 +29,7 @@
 /* Medium - only targets 1st breakpoint. Styles
    ========================================================================== */
 
-@media (--breakpont-medium) {
+@media (--breakpoint-medium) {
 
 }
 
@@ -39,6 +39,6 @@
 /* Large - only targets 2nd breakpoint.
    ========================================================================== */
 
-@media (--breakpont-large) {
+@media (--breakpoint-large) {
 
 }
