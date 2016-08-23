@@ -27,9 +27,9 @@ var output = postcss()
 
 fs.writeFile("css/mnml.css", output, 'utf-8')
 
-// Using Sqwish for CSS
+// Using Clean-css for CSS
 new compressor.minify({
-    type: 'sqwish',
+    type: 'clean-css',
     fileIn: './css/mnml.css',
     fileOut: './css/mnml.min.css'
 });
