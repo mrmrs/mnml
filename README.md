@@ -4,25 +4,36 @@
 
 View the project page at [http://mn-ml.cc](http://mn-ml.cc "MNML - A light-weight responsive html5 boilerplate.")
 
-MNML is a starting point for prototyping responsive HTML5 PostCSS projects.
-Uses PostCSS to create a dev environment for rapidly prototyping sites.
+MNML is a highly unopinionated starting point for prototyping responsive HTML5 projects with PostCSS.
+Uses browser-sync to create a livereloading server for rapidly prototyping sites.
 
 ## Features
 
-* css compiling with postcss
-* css minification
-* autoprefixer (automatically adds appropriate vendor prefixes)
-* browser reload on filesave using browser-sync
-* local server for serving a static site
+* Css compiling with postcss
+* Css minification
+* Autoprefixer (automatically adds appropriate vendor prefixes)
+* Browser reload on filesave using browser-sync
+* Local server for serving a static site
+* Uses normalize.css
 
 ## Getting started
 
 ### Instructions
 
-* Create a new repo for your project on Github
+* Clone the repo from GitHub and make it your own.
 * In terminal run each line as a separate command
-```bash
+
+```https
+    git clone https://github.com/mrmrs/mnml.git yourNewRepoName
+```
+
+```ssh
     git clone git@github.com:mrmrs/mnml.git yourNewRepoName
+```
+
+Then
+
+```bash
     cd yourNewRepoName
     rm -rf .git
     git init
