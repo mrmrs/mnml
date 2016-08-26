@@ -84,10 +84,19 @@ mnml/
 
 # Contributors
 
-- Xiao (Sean) Wu
-- Chris Bracco
-- Andrés Olivares
-- Amira Hailemariam
+- @xiaogwu
+- @cbracco
+- @franciscogo
+- @nolastan
+- @markphd
+- @amirahaile
+- @roylodder
+- @shakyShane
+- @andrew
+- @filipelinhares
+- @mattcdowning
+- @cwonrails
+- @mrzool
 
 # License
 
