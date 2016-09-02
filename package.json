@@ -32,7 +32,7 @@
     "postcss-conditionals": "^2.0.0",
     "postcss-css-variables": "^0.5.0",
     "postcss-custom-media": "^5.0.0",
-    "postcss-import": "^7.0.0",
+    "postcss-import": "^8.1.2",
     "watch": "^0.19.2"
   },
   "scripts": {
