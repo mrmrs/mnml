@@ -13,7 +13,7 @@ var customMedia = require("postcss-custom-media")
 var css = fs.readFileSync("src/mnml.css", "utf8")
 
 // process css
-var output = postcss()
+output = postcss()
   .use(atImport())
   .use(cssvariables())
   .use(conditionals())
@@ -22,10 +22,10 @@ var output = postcss()
   .process(css, {
     from: "./src/mnml.css",
     to: "./css/mnml.css"
-  })
-  .css
+  }).then(function(output) {
+    fs.writeFile("css/mnml.css", output, 'utf-8')
+  });
 
-fs.writeFile("css/mnml.css", output, 'utf-8')
 
 // Using Clean-css for CSS
 new compressor.minify({
