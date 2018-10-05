@@ -22,18 +22,18 @@
     "email": "hi@mrmrs.cc"
   },
   "devDependencies": {
-    "autoprefixer": "^6.5.1",
-    "browser-sync": "^2.17.5",
-    "clean-css": "^3.4.20",
-    "node-minify": "^2.0.0",
-    "parallelshell": "^2.0.0",
-    "postcss": "^5.2.5",
+    "autoprefixer": "^9.1.5",
+    "browser-sync": "^2.24.7",
+    "clean-css": "^4.2.1",
+    "node-minify": "^3.5.0",
+    "parallelshell": "^3.0.2",
+    "postcss": "^7.0.5",
     "postcss-browser-reporter": "^0.5.0",
-    "postcss-conditionals": "^2.0.2",
-    "postcss-css-variables": "^0.6.0",
-    "postcss-custom-media": "^5.0.1",
-    "postcss-import": "^8.1.2",
-    "watch": "^1.0.1"
+    "postcss-conditionals": "^2.1.0",
+    "postcss-css-variables": "^0.10.0",
+    "postcss-custom-media": "^7.0.4",
+    "postcss-import": "^12.0.0",
+    "watch": "^1.0.2"
   },
   "scripts": {
     "start": "parallelshell 'npm run build:css' 'npm run server'",
