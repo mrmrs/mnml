@@ -28,8 +28,8 @@ output = postcss()
 
 
 // Using Clean-css for CSS
-new compressor.minify({
-    type: 'clean-css',
-    fileIn: './css/mnml.css',
-    fileOut: './css/mnml.min.css'
+compressor.minify({
+    compressor: 'clean-css',
+    input: './css/mnml.css',
+    output: './css/mnml.min.css'
 });
